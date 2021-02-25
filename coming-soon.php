@@ -241,26 +241,26 @@
 
             //------------------------------------------------------------------------------------------------
 
-			// create a new object
+			    // create a new object
                   $mail = new PHPMailer();
-			// configure an SMTP
+			    // configure an SMTP
                   $mail->isSMTP();
                   $mail->Host = 'smtp.mailtrap.io';
                   $mail->SMTPAuth = true;
-                  $mail->Username = '5e596736ac1489';
-                  $mail->Password = '86c5a79b0c7f59';
+                  $mail->Username = 'bfd7cabe9c9ac7';
+                  $mail->Password = 'ae757c20d9a720';
                   $mail->SMTPSecure = 'tls';
                   $mail->Port = 2525;
 
-                  $mail->setFrom('solovastrulivia@yahoo.com', 'Expedays');
+                  $mail->setFrom('demo.example10@gmail.com', 'Demo');
                   $mail->addAddress($email, $name);
                   $mail->Subject = 'Thank you for subscription';
-			// Set HTML 
+			        // Set HTML 
                   $mail->isHTML(TRUE);
                   $mail->Body = '<p class="thank-you-form">Thank you '.$name.' for your subscription!</p>';
-			// add attachment
-			// $mail->addAttachment('//confirmations/yourbooking.pdf', 'yourbooking.pdf');
-			// send the message
+                    // add attachment
+                    // $mail->addAttachment('//confirmations/yourbooking.pdf', 'yourbooking.pdf');
+                    // send the message
                   if(!$mail->send()){
                      echo '<p class="thank-you-form">Message could not be sent.</p>';
                      echo 'Mailer Error: ' . $mail->ErrorInfo;
@@ -275,13 +275,9 @@
               }
 		else // $_POST is empty.
 		{
-          echo "<p>Perform code for page without POST data.</p> ";
-    }
-
-
-
-
-      ?>
+            echo "<p>Perform code for page without POST data.</p> ";
+        }
+        ?>
   </div>
 </div>
 
